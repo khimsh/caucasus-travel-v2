@@ -1,0 +1,32 @@
+@use '../01_base/variables' as vars;
+
+/* Tour Slider */
+.tour-slider {
+    margin-top: 25px;
+    width: 100%;
+    height: 360px;
+}
+
+.tour-slide-prev,
+.tour-slide-next {
+    position: absolute;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: vars.$color-white;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    z-index: 100;
+}
+
+.tour-slide-prev {
+    left: 25px;
+}
+
+.tour-slide-next {
+    right: 25px;
+}

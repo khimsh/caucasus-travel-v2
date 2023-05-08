@@ -170,11 +170,14 @@ html:focus-within {
 }
 
 .menu-link {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
+}
+.menu-link.active {
+  color: #FF0000;
 }
 
 .language-switcher {

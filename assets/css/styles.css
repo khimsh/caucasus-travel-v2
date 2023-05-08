@@ -309,6 +309,7 @@ html:focus-within {
   --animation-timing: 0.25s;
   position: relative;
   transition: all var(--animation-timing) ease-in-out;
+  isolation: isolate;
 }
 .card a {
   color: #000;

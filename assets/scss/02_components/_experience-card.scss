@@ -3,9 +3,9 @@
 .card {
     --animation-timing: 0.25s;
 
-
     position: relative;
     transition: all var(--animation-timing) ease-in-out;
+    isolation: isolate;
 
     a {
         color: vars.$color-black;

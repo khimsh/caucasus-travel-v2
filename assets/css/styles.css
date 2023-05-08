@@ -336,6 +336,9 @@ html:focus-within {
   padding: 0;
   list-style-type: none;
 }
+.tour-maps li[data-image].active {
+  z-index: 1;
+}
 
 .tour-map-container {
   position: relative;
@@ -348,6 +351,9 @@ html:focus-within {
 }
 .tour-map-container img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .request-tour {

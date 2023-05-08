@@ -190,6 +190,46 @@ html:focus-within {
   object-position: center;
 }
 
+.popular-seasons-chart {
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular-seasons-chart h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1F7431;
+  text-transform: uppercase;
+}
+
+.months {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 3px;
+}
+
+.month {
+  width: 24px;
+  height: 24px;
+  font-size: 8px;
+  font-weight: 700;
+  color: #fff;
+  display: grid;
+  place-content: center;
+}
+.month.populatiry-low {
+  background-color: #A8BBA0;
+}
+.month.populatiry-medium {
+  background-color: #6E9267;
+}
+.month.populatiry-high {
+  background-color: #3A7239;
+}
+
 .banner {
   margin-block: 30px;
   padding-block: 6px;
@@ -303,6 +343,62 @@ html:focus-within {
 }
 .tour-map-container img {
   width: 100%;
+}
+
+.request-tour {
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.request-tour-button {
+  padding: 11px 72px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #218838;
+  border: none;
+  border-radius: 5px;
+}
+
+.download-tour-info-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  max-width: 18ch;
+}
+.download-tour-info-button span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5A6268;
+}
+
+.switch-tour {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.switch-tour > * {
+  height: 55px;
+  border-radius: 5px;
+  border: 4px solid #5A6268;
+  color: #5A6268;
+  font-size: 24px;
+  display: grid;
+  place-items: center;
+}
+.switch-tour p {
+  width: 244px;
+  font-weight: 700;
+}
+
+.switch-tour-prev,
+.switch-tour-next {
+  width: 55px;
+  text-decoration: none;
 }
 
 .card {

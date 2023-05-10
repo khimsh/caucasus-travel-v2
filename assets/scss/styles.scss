@@ -16,6 +16,8 @@
 
 @use '02_components/tour';
 
-@use '02_components/experience-card';
+@use '02_components/cards/card-experience';
+
+@use '02_components/cards/card-tour-type';
 
 @use '03_layout/experiences-grid';

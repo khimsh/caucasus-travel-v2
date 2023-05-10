@@ -6,13 +6,14 @@
     z-index: 100000;
 
     &+* {
-        margin-top: 70px;
+        margin-top: 100px;
     }
 }
 
 .site-header-wrapper {
     display: flex;
     align-items: center;
+    height: 70px;
 }
 
 .site-logo {
@@ -38,14 +39,21 @@
 }
 
 .menu-link {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
+    transition: color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: #FF0000;
+    }
 
     &.active {
         color: #FF0000;
+        font-weight: 700;
     }
 }
 

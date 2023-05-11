@@ -141,10 +141,6 @@ html:focus-within {
   background-color: #000;
 }
 
-.bg-red {
-  background-color: #ac0008;
-}
-
 .site-header {
   position: fixed;
   top: 0;
@@ -255,12 +251,31 @@ html:focus-within {
 
 .banner {
   margin-block: 30px;
-  padding-block: 6px;
-  text-align: center;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
   font-weight: 500;
+  text-align: center;
   letter-spacing: -1px;
   color: #fff;
+}
+.banner--lg {
+  height: 50px;
+  font-family: "Avenir Next Demi", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: initial;
+}
+.banner--red {
+  background-color: #ac0008;
+}
+.banner--orange {
+  background-color: #FC781E;
+}
+.banner--gold {
+  background-color: #9E8959;
 }
 
 /* Tour Slider */
@@ -637,27 +652,39 @@ html:focus-within {
   margin-bottom: 5px;
 }
 
-.tour-card {
-  padding-bottom: 30px;
-}
 .tour-card:not(:last-child) {
+  padding-bottom: 30px;
   border-bottom: 5px solid #A28951;
 }
-.tour-card.active .tour-card-action-btn i {
+.tour-card.active .tour-card-action__btn i {
   transform: rotate(180deg);
 }
-.tour-card.active .tour-card-action-text {
+.tour-card.active .tour-card-action__text {
   opacity: 0;
   pointer-events: none;
 }
-
-.tour-card-displayed {
+.tour-card__displayed {
   display: grid;
   grid-template-columns: 518px 1fr;
   gap: 30px;
 }
-
-.tour-card-description {
+.tour-card__image {
+  position: relative;
+}
+.tour-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tour-card__title {
+  position: absolute;
+  inset: 15px;
+  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+.tour-card__description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -667,23 +694,84 @@ html:focus-within {
   letter-spacing: -1px;
   color: #000;
 }
-
-.tour-card-image {
-  position: relative;
+.tour-card__details {
+  height: 0;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
 }
-.tour-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.tour-card__headings, .tour-card__chart {
+  display: grid;
+  grid-template-columns: 518px 67px 146px 517px;
+  gap: 30px;
 }
-
-.tour-card-title {
-  position: absolute;
-  inset: 15px;
-  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  font-weight: 600;
+.tour-card__headings {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+.tour-card__headings > *:last-child {
+  color: #1F7431;
+  transform: translateX(-30px);
+}
+.tour-card__charts {
+  display: grid;
+  gap: 15px;
+}
+.tour-card__chart .popular-seasons-chart {
+  margin: 0;
+}
+.tour-card__chart .months {
+  gap: 10px;
+}
+.tour-card__chart .month {
+  width: 34px;
+  height: 34px;
+  font-size: 10px;
+}
+.tour-card__details-title {
+  padding: 4px 14px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #E0E4EB;
+  border-radius: 4px;
+}
+.tour-card__duration {
+  background-color: #E0E4EB;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+}
+.tour-card__details-tagline {
+  margin-top: 4px;
+  padding-left: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #B14F52;
+}
+.tour-card__countries {
+  display: flex;
+  gap: 13px;
+}
+.tour-card__countries > * {
+  width: 40px;
+  height: 34px;
+  border: 2px solid #707070;
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.tour-card__check-dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 700;
   color: #fff;
+  background-color: #ED7D31;
 }
 
 .tour-card-action {
@@ -698,7 +786,7 @@ html:focus-within {
 .tour-card-action > * {
   pointer-events: none;
 }
-.tour-card-action-text {
+.tour-card-action__text {
   font-size: 18px;
   font-weight: 500;
   line-height: 1;
@@ -706,7 +794,7 @@ html:focus-within {
   color: #AC0008;
   transition: opacity 0.3s ease-in-out;
 }
-.tour-card-action-btn {
+.tour-card-action__btn {
   width: 36px;
   height: 36px;
   display: grid;
@@ -715,88 +803,8 @@ html:focus-within {
   background-color: #AC0008;
   color: #fff;
 }
-.tour-card-action-btn i {
+.tour-card-action__btn i {
   transition: transform 0.3s ease-in-out;
-}
-
-.tour-card-details {
-  height: 0;
-  transition: height 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-.tour-card-details-headings,
-.tour-card-details-chart {
-  display: grid;
-  grid-template-columns: 518px 67px 146px 517px;
-  gap: 30px;
-}
-
-.tour-card-details-headings {
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 14px;
-}
-.tour-card-details-headings > *:last-child {
-  color: #1F7431;
-  transform: translateX(-30px);
-}
-
-.tour-card-details-charts {
-  display: grid;
-  gap: 15px;
-}
-
-.tour-card-details-chart .popular-seasons-chart {
-  margin: 0;
-}
-.tour-card-details-chart .months {
-  gap: 10px;
-}
-.tour-card-details-chart .month {
-  width: 34px;
-  height: 34px;
-  font-size: 10px;
-}
-
-.tour-card-details-title {
-  padding: 4px 14px;
-  font-size: 20px;
-  font-weight: 700;
-  background-color: #E0E4EB;
-  border-radius: 4px;
-}
-
-.tour-card-details-tagline {
-  margin-top: 4px;
-  padding-left: 14px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #B14F52;
-}
-
-.tour-card-details-duration {
-  background-color: #E0E4EB;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 700;
-  display: grid;
-  place-content: center;
-}
-
-.tour-card-details-countries {
-  display: flex;
-  gap: 13px;
-}
-.tour-card-details-countries > * {
-  width: 40px;
-  height: 34px;
-  border: 2px solid #707070;
-  border-radius: 2px;
-  display: grid;
-  place-content: center;
-  font-size: 16px;
-  font-weight: 700;
 }
 
 .experiences-grid {

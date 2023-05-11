@@ -78,7 +78,7 @@ const swiper = new Swiper('.tour-slider', {
                     return
                 }
 
-                const tourDetails = card.querySelector('.tour-card-details')
+                const tourDetails = card.querySelector('.tour-card__details')
                 const tourDetailsHeight = tourDetails.scrollHeight
                 card.classList.toggle('active')
 

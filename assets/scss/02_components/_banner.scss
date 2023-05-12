@@ -12,6 +12,11 @@
     letter-spacing: -1px;
     color: vars.$color-white;
 
+    &--sm {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
     &--lg {
         height: 50px;
         font-family: 'Avenir Next Demi', sans-serif;

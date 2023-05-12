@@ -99,3 +99,108 @@ html:focus-within {
     display: grid;
     gap: 30px;
 }
+
+.services-hero {
+    padding-block: 40px;
+    margin-block: 20px 30px;
+    position: relative;
+    height: 75vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #020203;
+    isolation: isolate;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 76%;
+        height: 100%;
+        background-image: url('../images/Stamba WW.png');
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    .container {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__description {
+        padding-block: 20px 32px;
+        display: grid;
+        gap: 30px;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        p {
+            margin-inline: auto;
+            max-width: 980px;
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            letter-spacing: -1;
+            line-height: 24px;
+        }
+    }
+
+    &__heading {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -1;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.services-list {
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 380px);
+    justify-content: space-between;
+    gap: 30px;
+
+    a {
+        display: grid;
+        place-content: center;
+        height: 60px;
+        font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        color: #A28951;
+        letter-spacing: -1;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 3px solid #A28951;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 1);
+    }
+}
+
+.partners {
+    margin-block: 30px 20px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 34px;
+
+        &>figure:first-child {
+            margin-right: auto;
+        }
+    }
+}

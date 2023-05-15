@@ -5,6 +5,22 @@
         border-bottom: 5px solid #A28951;
     }
 
+    &--services {
+        &:first-child {
+            padding-top: 30px;
+            border-top: 5px solid #A28951;
+        }
+
+        &:last-child {
+            padding-bottom: 30px;
+            border-bottom: 5px solid #A28951;
+        }
+
+        .tour-card-action {
+            margin-top: auto;
+        }
+    }
+
     &.active {
         .tour-card-action {
             &__btn {
@@ -43,6 +59,7 @@
         font-size: 40px;
         font-weight: 600;
         color: #fff;
+        text-transform: uppercase;
     }
 
     &__description {
@@ -55,6 +72,21 @@
         line-height: 26px;
         letter-spacing: -1px;
         color: #000;
+
+        p+p {
+            margin-top: 5px;
+        }
+
+        &--services {
+            font-weight: 400;
+
+            h2 {
+                margin-bottom: 12px;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+            }
+        }
     }
 
     &__details {
@@ -178,6 +210,42 @@
 
         .tour-card-contact {
             margin-top: 0;
+        }
+    }
+
+    &__description-with-images {
+        display: flex;
+        gap: 10px;
+
+        &>div:last-child {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            figure {
+                img {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    &__services-action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        strong {
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            letter-spacing: -1px;
+            font-weight: 600;
         }
     }
 }

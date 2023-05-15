@@ -757,6 +757,17 @@ html:focus-within {
   padding-bottom: 30px;
   border-bottom: 5px solid #A28951;
 }
+.tour-card--services:first-child {
+  padding-top: 30px;
+  border-top: 5px solid #A28951;
+}
+.tour-card--services:last-child {
+  padding-bottom: 30px;
+  border-bottom: 5px solid #A28951;
+}
+.tour-card--services .tour-card-action {
+  margin-top: auto;
+}
 .tour-card.active .tour-card-action__btn i {
   transform: rotate(180deg);
 }
@@ -784,6 +795,7 @@ html:focus-within {
   font-size: 40px;
   font-weight: 600;
   color: #fff;
+  text-transform: uppercase;
 }
 .tour-card__description {
   display: flex;
@@ -794,6 +806,18 @@ html:focus-within {
   line-height: 26px;
   letter-spacing: -1px;
   color: #000;
+}
+.tour-card__description p + p {
+  margin-top: 5px;
+}
+.tour-card__description--services {
+  font-weight: 400;
+}
+.tour-card__description--services h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
 }
 .tour-card__details {
   height: 0;
@@ -896,6 +920,34 @@ html:focus-within {
 }
 .tour-card__footer .tour-card-contact {
   margin-top: 0;
+}
+.tour-card__description-with-images {
+  display: flex;
+  gap: 10px;
+}
+.tour-card__description-with-images > div:last-child {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.tour-card__description-with-images > div:last-child figure img {
+  margin-left: auto;
+}
+.tour-card__services-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tour-card__services-action p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.tour-card__services-action strong {
+  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  letter-spacing: -1px;
+  font-weight: 600;
 }
 
 .tour-card-action {

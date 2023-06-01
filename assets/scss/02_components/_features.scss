@@ -1,6 +1,9 @@
 .features {
     display: grid;
     row-gap: 25px;
+    margin: 25px 0;
+    padding: 0;
+    list-style: none;
 }
 
 .feature {
@@ -36,7 +39,7 @@
         display: flex;
 
         &>div:has(p) {
-            padding: 12px 12px 12px 25px;
+            padding: 12px 12px 12px 20px;
             font-size: 18px;
 
             p+p {
@@ -139,4 +142,10 @@
 
 .bg-green-2 {
     background-color: hsl(163 14% 43% / .15);
+}
+
+.features-title {
+    font-size: 60px;
+    letter-spacing: -1px;
+    margin-top: 10px;
 }

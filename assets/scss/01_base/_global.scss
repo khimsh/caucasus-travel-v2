@@ -224,3 +224,36 @@ html:focus-within {
         }
     }
 }
+
+.welcome-to-georgia {
+    max-width: 1012px;
+    margin-left: auto;
+    margin-top: 150px;
+    margin-bottom: 200px;
+
+    &__card-wrap {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__image {
+        flex-shrink: 0;
+        margin-left: 60px;
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 36px;
+    }
+}
+
+.tablecloth-trademark {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 18px;
+    line-height: 22px;
+}

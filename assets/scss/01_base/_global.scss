@@ -104,6 +104,22 @@ html:focus-within {
     gap: 30px;
 }
 
+.tour-types-heading,
+.experiences-heading,
+.services-heading {
+    margin-top: 30px;
+}
+
+.tour-types-title,
+.experiences-title,
+.services-title {
+    font-family: 'Avenir Next Demi';
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .services-hero {
     padding-block: 40px;
     margin-block: 20px 30px;

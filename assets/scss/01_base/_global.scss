@@ -90,34 +90,27 @@ html:focus-within {
     }
 }
 
-.page-title {
-    margin-top: 12px;
-    font-family: 'Avenir Next Demi';
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .tour-container {
     display: grid;
     gap: 30px;
 }
 
-.tour-types-heading,
-.experiences-heading,
-.services-heading {
+.page-heading {
     margin-top: 30px;
 }
 
-.tour-types-title,
-.experiences-title,
-.services-title {
+.page-title {
+    margin-bottom: 25px;
     font-family: 'Avenir Next Demi';
     font-size: 40px;
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
+    line-height: 1;
+
+    &--m0 {
+        margin: 0;
+    }
 }
 
 .services-hero {
@@ -256,4 +249,5 @@ html:focus-within {
     gap: 18px;
     font-size: 18px;
     line-height: 22px;
+    color: #707070;
 }

@@ -1,26 +1,15 @@
 .tour-heading {
-    margin-top: 30px;
-    margin-bottom: 13px;
-
-    &>div {
-        margin-bottom: 13px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.tour-title {
-    font-family: 'Avenir Next Demi', sans-serif;
-    font-size: 40px;
-    line-height: 1;
-    font-weight: 600;
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .tour-tagline {
+    margin-bottom: 15px;
     font-size: 24px;
     font-weight: 500;
-    color: #ED1F24;
+    color: #ac0008;
 }
 
 .tour-description {
@@ -119,6 +108,8 @@
             top: 18px;
             font-family: 'Avenir Next Demi', sans-serif;
             font-size: 18px;
+            font-weight: 600;
+            color: #ac0008;
         }
     }
 

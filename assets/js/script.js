@@ -28,14 +28,7 @@ const swiper = new Swiper('.tour-slider', {
                     image.classList.remove('active')
                 })
 
-                const dayPlan = reference.querySelector('p > strong').textContent
-                const imageRef = reference.dataset.reference
-                const image = mapImages.find((image) => {
-                    return image.dataset.image === imageRef
-                })
-
-                image.appendChild(displayDayAgendaOnMap(dayPlan))
-                image.classList.add('active')
+                displayTextOnMap(reference, mapImages)
             })
 
             reference.addEventListener('mouseenter', () => {
@@ -43,25 +36,57 @@ const swiper = new Swiper('.tour-slider', {
                     image.classList.remove('active')
                 })
 
-                const dayPlan = reference.querySelector('p > strong').textContent
-                const imageRef = reference.dataset.reference
-                const image = mapImages.find((image) => {
-                    return image.dataset.image === imageRef
-                })
-
-                image.appendChild(displayDayAgendaOnMap(dayPlan))
-                image.classList.add('active')
+                displayTextOnMap(reference, mapImages)
             })
+        })
+
+        // Remove day plan text and revert back to first image
+        // if the user has left the agenda container
+        const mapAgenda = document.querySelector('.tour-agenda')
+
+        mapAgenda.addEventListener('mouseleave', () => {
+            // Reset image to the first image
+            mapImages.forEach((image) => {
+                image.classList.remove('active')
+            })
+            const image = [...document.querySelectorAll('[data-image]')][0]
+            image.classList.add('active')
+
+            removeDayPlanFromMap()
         })
     }
 
     mapImages()
 
+    function displayTextOnMap(ref, images) {
+        const dayNumber = ref.querySelector('.tour-day').textContent
+        const dayPlan = ref.querySelector('p > strong').textContent
+        const textOnMap = `${dayNumber} ${dayPlan}`
+        const imageRef = ref.dataset.reference
+        const image = images.find((image) => {
+            return image.dataset.image === imageRef
+        })
+
+        image.appendChild(displayDayAgendaOnMap(textOnMap))
+        image.classList.add('active')
+    }
+
     function displayDayAgendaOnMap(text) {
+        removeDayPlanFromMap()
+
+        // Create day plan text
         const el = document.createElement('div')
         el.classList.add('day-plan')
         el.innerHTML = text
         return el
+    }
+
+    // Remove existing day plan from map
+    function removeDayPlanFromMap() {
+        const existingDayPlan = document.querySelector('.day-plan')
+        if (existingDayPlan) {
+            existingDayPlan.remove()
+        }
     }
 
     // Open/Close Tour Details

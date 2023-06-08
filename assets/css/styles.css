@@ -153,7 +153,7 @@ html:focus-within {
   margin-block: 20px 30px;
   position: relative;
   height: 75vh;
-  min-height: 600px;
+  min-height: 685px;
   display: flex;
   flex-direction: column;
   background-color: #020203;

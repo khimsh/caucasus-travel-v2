@@ -1101,6 +1101,12 @@ html:focus-within {
 .tour-card__image--w-shadow {
   box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.5);
 }
+.tour-card__image--hoverable {
+  transition: all 0.2s ease-in-out;
+}
+.tour-card__image--hoverable:hover {
+  box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.5);
+}
 .tour-card__image img {
   width: 100%;
   height: 100%;
@@ -1108,7 +1114,7 @@ html:focus-within {
 }
 .tour-card__title {
   position: absolute;
-  inset: 15px;
+  inset: 5px 15px;
   font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 600;

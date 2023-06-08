@@ -113,6 +113,32 @@ const swiper = new Swiper('.tour-slider', {
                     tourDetails.style.height = 0
                 }
             })
+
+            const cardImage = card.querySelector('.tour-card__image--hoverable')
+
+            cardImage.addEventListener('mouseenter', (e) => {
+                const tourDetails = card.querySelector('.tour-card__details')
+                const tourDetailsHeight = tourDetails.scrollHeight
+                card.classList.add('active')
+
+                if (card.classList.contains('active')) {
+                    tourDetails.style.height = tourDetailsHeight + 'px'
+                } else {
+                    tourDetails.style.height = 0
+                }
+            })
+
+            cardImage.addEventListener('mouseleave', (e) => {
+                const tourDetails = card.querySelector('.tour-card__details')
+                const tourDetailsHeight = tourDetails.scrollHeight
+                card.classList.remove('active')
+
+                if (card.classList.contains('active')) {
+                    tourDetails.style.height = tourDetailsHeight + 'px'
+                } else {
+                    tourDetails.style.height = 0
+                }
+            })
         })
     }
 

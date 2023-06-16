@@ -97,6 +97,8 @@ const swiper = new Swiper('.tour-slider', {
 
         const tourCards = [...document.querySelectorAll('.tour-card')]
 
+        console.log(tourCards)
+
         tourCards.forEach((card) => {
             card.addEventListener('click', (e) => {
                 if (!e.target.classList.contains('tour-card-action')) {
@@ -115,6 +117,8 @@ const swiper = new Swiper('.tour-slider', {
             })
 
             const cardImage = card.querySelector('.tour-card__image--hoverable')
+
+            if (!cardImage) return
 
             cardImage.addEventListener('mouseenter', (e) => {
                 const tourDetails = card.querySelector('.tour-card__details')

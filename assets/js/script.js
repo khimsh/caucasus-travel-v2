@@ -143,4 +143,32 @@ const swiper = new Swiper('.tour-slider', {
     }
 
     tourDetails()
+
+    // Change images on scroll
+    function changeImagesOnScroll() {
+        if (!document.querySelector('.scrollable-image')) return
+
+        const scrollElement = document.querySelector('.scrollable-image > img')
+        const imageSources = Array.from(
+            document.querySelectorAll('.image-sources img')
+        ).map((image) => image.src)
+
+        const heightOfScrollElement =
+            document.querySelector('.scroll-component').scrollHeight
+
+        const numberOfImagesToShow = imageSources.length // რამდენჯერ გვინდა სურათის შეცვლა
+        const imageChangeSpeed = heightOfScrollElement / numberOfImagesToShow
+
+        // console.log(imageChangeSpeed)
+
+        window.addEventListener('scroll', () => {
+            // console.log(window.scrollY)
+            // for (let i = 1; i < numberOfImagesToShow; i++) {
+            //     console.log(i)
+            //     console.log(i * imageChangeSpeed)
+            // }
+        })
+    }
+
+    changeImagesOnScroll()
 })()

@@ -676,7 +676,6 @@ html:focus-within {
 }
 
 .tour-heading {
-  margin-bottom: 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -684,8 +683,9 @@ html:focus-within {
 
 .tour-tagline {
   margin-bottom: 15px;
+  font-family: "Avenir Next Demi", sans-serif;
+  font-weight: 600;
   font-size: 24px;
-  font-weight: 500;
   color: #ac0008;
 }
 
@@ -693,7 +693,8 @@ html:focus-within {
   margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
-  font-family: "Avenir Next LT Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Avenir Next Demi", sans-serif;
+  font-weight: 600;
 }
 
 .tour-columns {
@@ -929,15 +930,17 @@ html:focus-within {
 }
 
 .tour-heading-something {
-  width: 274px;
+  width: 412px;
   height: 43px;
-  display: grid;
-  place-items: center;
-  font-family: "Avenir Next Demi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
+  color: #FFFFFF;
   text-transform: uppercase;
-  border: 3px solid #000;
+  padding-right: 18px;
+  background-image: linear-gradient(to left, #C00000, #FFFFFF);
 }
 
 .scroll-component {
@@ -999,6 +1002,39 @@ html:focus-within {
   font-size: 20px;
   font-weight: 500;
   color: #000;
+}
+
+.scrollable-image {
+  position: fixed;
+  top: 70px;
+  right: 0px;
+  width: 50%;
+}
+.scrollable-image img {
+  width: 100%;
+  height: 440px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.scrollable-image div {
+  margin-top: 472px;
+  margin-right: calc((100% - 388px) / 2);
+}
+.scrollable-image div p {
+  margin-top: 32px;
+  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #AC0008;
+}
+.scrollable-image div p + p {
+  margin-top: 8px;
+}
+
+.image-sources {
+  display: none;
 }
 
 .card {
